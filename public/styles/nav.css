@@ -1,0 +1,36 @@
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100vw;
+  z-index: 99;
+  padding: 1.5em;
+  background-color: #e0a205;
+  color: #ffffff;
+}
+
+/* Tweeter branding logo text */
+.logoType {
+  font-family: Bungee, sans-serif;
+  font-size: 1.5em;
+}
+
+/* Slogan */
+span.navbarSlogan {
+  right: 1.5em;
+  top: 1.5em;
+
+}
+
+/* Font awesome arrow icon */
+nav i {
+  position: relative;
+  right: 48%;
+  bottom: -1.5em;
+  color: #522110;
+  transition: all 0.5s ease;
+}

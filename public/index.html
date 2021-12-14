@@ -7,23 +7,57 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- External Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome fonts icons -->
+    <script src="https://kit.fontawesome.com/0a7ed7867a.js" crossorigin="anonymous"></script>
+    
+    
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/nav.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/header.css" type="text/css"/>
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class = "logoType"> trump tweeter</span>
+      <span class = "navbarSlogan">
+        <b>Write</b> a new tweet
+  <a><i class="fas fa-angle-double-down"></i></a> 
+      </span>
+
     </nav>
+    <!-- Header with user avatar and name-->
+    <header class = "userProfile">
+      <div class = "trumpImage">
+          <img src="/images/trump.gif"> 
+      </div>
+      <br>
+      <div>
+          <p class = "introType">From the desk of</p> <br> <h3>Donald J. Trump</h3>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+
+      <h4>I am the greatest president this country has ever seen!</h3>
+
+      <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <br>
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br>
+        commodo consequat nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor <br>
+        in reprehenderi. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. "<br></p>
+
+    </main>
   </body>
 </html>
