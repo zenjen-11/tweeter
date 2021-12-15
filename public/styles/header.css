@@ -1,46 +1,25 @@
-/* Header with avatar image and user name */
-.userProfile {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  top: 120px;
-  background-color: #c4b69f;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#page-header {
+	box-sizing: border-box;
+	border-radius: 0 0 20px 20px;
+	width: 38%;
+	height: 460px;
+	padding: 30px;
+	background-color: #c4b69f;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+	margin: 0 10% 0 0;
 }
-
-/* Image of Trump */
-
-.trumpImage {
- /* border: dashed red; */
-  height: 250px;
-
+#page-header h2 {
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: 300;
+	color: #522110;
+	font-family: Bungee; sans-serif;
+	margin-top: -10px;
 }
-
-/* Name */
-h3 {
-  display: inline-block;
-  width: 256px;
-  height: 40px;
- /*border: dashed red; */
- font-family: Bungee; sans-serif;
-  font-size: 21px;
-  line-height: 28px;
-  text-align: center;
-  margin-top: -60px;
-  color: #522110;
-}
-
-.introType {
-  text-align: center;
-  font-size: 18px;
-  height: 12px;
- /* border: dashed red; */
-  font-family: Source Sans Pro, sans-serif;
-  color: #522110;
-  margin: 0;
-
+#page-header img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+	height: 350px;
 }

@@ -1,0 +1,199 @@
+/* Main container */
+main#container {
+  border: dashed red;
+}
+
+/* User profile */
+
+section#user-profile  {
+  border: dashed red;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.profile-info {
+  width: 90%;
+  height: 500px;
+  background-color: #c4b69f;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  border: dashed red;
+}
+
+p.user-name {
+  font-family: Bungee; sans-serif;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  text-align: center;
+  margin-top: 10px;
+  color: #522110;
+}  
+
+
+/*New tweet section */
+section#new-tweet {
+  width: 75%;
+  border: dashed red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+form {
+  width: 80%;
+  border: dashed red;
+
+
+}
+
+textarea#tweet-text {
+  width: 100%;
+  border-bottom: 4px solid #522110 ;
+  height: 80px;
+  margin-top: -20px;
+}
+
+label {
+  font-family: Bungee; sans-serif;
+  font-size: 1em;
+  line-height: 18px;
+  border: dashed red;
+  color: #522110;
+
+}
+
+ Tweet form 
+.new-tweet form {
+  margin: 60px 0 60px;
+}
+
+/* Text input field */
+.new-tweet textarea {
+  width: 80%;
+  height: 45px;
+  font-size: 16px;
+  line-height: 20px;
+  border: 0;
+  border-bottom: 4px solid #522110 ;
+  font-weight: 300;
+  resize: none;
+  outline: none;
+  background-color: inherit;
+  color: #522110; 
+}
+
+.profile-1 {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 50px;
+  border: solid #522110 2px;
+
+
+}
+.placeholder-1 {
+  width: 25%;
+  height: 110px;
+  margin: 15px;
+  float: left;
+  border: dashed red;
+
+}
+
+.profile-2 {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 50px;
+  border: solid #522110 2px;
+
+}
+
+.placeholder-2 {
+  width: 25%;
+  height: 110px;
+  margin: 15px;
+  float: left;
+  border: dashed red;
+
+}
+
+.profile-3 {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 50px;
+  border: solid #522110 2px;
+}
+
+.placeholder-3 {
+  width: 25%;
+  height: 110px;
+  margin: 15px;
+  float: left;
+  border: dashed red;
+
+}  
+
+
+/* Tweet button */
+button.tweet-button {
+  font-family: Bungee, sans-serif;
+  font-size: .8em;
+  letter-spacing: .1em;
+  background-color: #e0a205;
+  color: #ffff;
+  outline: none;
+  padding: 6px 9px;
+  margin-top: 8px;
+} */
+
+/* Tweet button hovering */
+button.tweet-button:hover {
+  background-color: #b16712;
+} */
+
+/* Tweet button when pressed */
+button.tweet-button:active {
+  background-color: #ac7e09;
+} */
+
+/* Character counter */
+.counter {
+  font-family: Bungee, sans-serif;
+  color: #522110;
+  float: right;
+  margin-top: 14px; */
+}
+
+/* For when character counter goes over the character limit */
+.over-char-limit {
+  color: #DB504A; */
+}
+
+/* Error message (default hidden) */
+.new-tweet h5 {
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border-radius: 5px;
+  display: none; */
+}
+
+/* Error icon */
+.new-tweet i {
+  padding: 3px 10px;
+}
+
+footer {
+  border-top: 1.5px solid #522110 ;
+  clear: both;
+  position: relative;
+  height: 40px;
+  padding: 8px;
+  bottom:0; 
+}

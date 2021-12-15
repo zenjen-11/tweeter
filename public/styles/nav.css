@@ -3,7 +3,7 @@ nav {
   top: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 120px;
   width: 100vw;
@@ -12,18 +12,29 @@ nav {
   background-color: #e0a205;
   color: #ffffff;
 }
+/* Navigation branding items */
+.nav-branding {
+  width: 100vw;
+  display: flex;
+  /* border: dashed red; */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Tweeter branding logo text */
 .logoType {
   font-family: Bungee, sans-serif;
-  font-size: 1.5em;
+  /* border: dashed red; */
+  font-size: 1.7em;
 }
 
 /* Slogan */
 span.navbarSlogan {
   right: 1.5em;
   top: 1.5em;
-
+  font-size: 1.5em;
+  /* border: dashed red; */
 }
 
 /* Font awesome arrow icon */
