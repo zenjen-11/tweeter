@@ -1,0 +1,92 @@
+/* Main container */
+main#container {
+	/*border: dashed red; */
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+
+/*New tweet section */
+section.new-tweet {
+	width: 100%;
+	/*  border: dashed red; */
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 40px;
+}
+
+textarea#tweet-text {
+	width: 90%;
+	border-bottom: 7px solid #522110;
+	background-color: inherit;
+	height: 90px;
+	margin-top: 20px;
+}
+.new-tweet label {
+	font-family: Bungee, sans-serif;
+	font-size: 1.12em;
+	line-height: 18px;
+	/*  border: dashed red; */
+	color: #522110;
+}
+/* Tweet form */
+.new-tweet form {
+	width: 100%;
+	/* border: dashed red; */
+	margin-bottom: 30px
+}
+
+/* Tweet button */
+button.tweet-button {
+	font-family: Bungee, sans-serif;
+	font-size: .8em;
+	letter-spacing: .1em;
+	background-color: #e0a205;
+	color: #ffff;
+	outline: none;
+	padding: 6px 9px;
+}
+
+/* Tweet button hovering*/
+button.tweet-button:hover {
+	background-color: #b16712;
+}
+
+/* Tweet button when pressed*/
+button.tweet-button:active {
+	background-color: #ac7e09;
+}
+
+/* Character counter */
+output.counter {
+	margin-right: 3.6em;
+	font-family: Bungee, sans-serif;
+	color: #522110;
+	float: right;
+	margin-top: 14px;
+}
+
+/* For when character counter goes over the character limit */
+.over-char-limit {
+	color: #DB504A;
+}
+
+/* Error message (default hidden) */
+.new-tweet h5 {
+	margin: 0.5em 0;
+	font-size: 0.9em;
+	font-weight: 400;
+	color: #D8000C;
+	background-color: #FFD2D2;
+	border-radius: 5px;
+	display: none;
+}
+
+/* Error icon */
+.new-tweet i {
+	padding: 3px 10px;
+} 

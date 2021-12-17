@@ -1,79 +1,54 @@
-/* Main container */
-main#container {
-	/*border: dashed red; */
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: space-evenly;
-}
-
-/*New tweet section */
-section.new-tweet {
-	width: 100%;
-	/*  border: dashed red; */
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	margin-bottom: 40px;
-}
-
-textarea#tweet-text {
+/* profile container */
+#tweet-box {
 	width: 90%;
-	border-bottom: 7px solid #522110;
-	background-color: inherit;
-	height: 90px;
-	margin-top: 20px;
+	height: 17rem;
+	margin-bottom: 6rem;
+	border: solid #522110 3px;
+	box-shadow: 0px 0px 0px #332a28;
+	transition: all 300ms ease-in-out;
+
 }
-.new-tweet label {
-	font-family: Bungee, sans-serif;
-	font-size: 1.12em;
-	line-height: 18px;
-	/*  border: dashed red; */
+
+#tweet-box:hover {
+
+	box-shadow: 0px 5px 10px #332a28;
+}
+
+/* user avatar */
+img.avatars {
+	width: 15%;
+	height: 30%;
+	margin:  2em 2em 2em 2em;
+	float: left;
+	display: block;
+}
+
+/* user avatar */
+h3 {
+	margin-top: 2em;
+	font-family: Bungee; sans-serif;
 	color: #522110;
-}
-/* Tweet form */
-.new-tweet form {
-	width: 100%;
-	/* border: dashed red; */
-	margin-bottom: 30px
+	font-size: 1em;
+	text-align: left;
+	font-weight: 700;
+	display: inline-block;
+
+
 }
 
-/* Tweet button */
-button.tweet-button {
-	font-family: Bungee, sans-serif;
-	font-size: .8em;
-	letter-spacing: .1em;
-	background-color: #e0a205;
-	color: #ffff;
-	outline: none;
-	padding: 6px 9px;
+span.user-handle {
+	text-align: right;
+	color: #9e8d86;
+	margin-left: 8em;
+	margin-top: 2em
+
+
+} 
+
+p.tweet-content {
+
 }
 
-/* Tweet button hovering*/
-button.tweet-button:hover {
-	background-color: #b16712;
-}
-
-/* Tweet button when pressed*/
-button.tweet-button:active {
-	background-color: #ac7e09;
-}
-
-/* Character counter */
-output.counter {
-	margin-right: 3.6em;
-	font-family: Bungee, sans-serif;
-	color: #522110;
-	float: right;
-	margin-top: 14px;
-}
-
-/* For when character counter goes over the character limit */
-.over-char-limit {
-	color: #DB504A;
-}
 
 /* Error message (default hidden) */
 .new-tweet h5 {
@@ -90,100 +65,25 @@ output.counter {
 .new-tweet i {
 	padding: 3px 10px;
 } 
-/* font for individual profiles */
-h4 {
-	margin: 12px;
-	font-family: Bungee;
-	sans-serif;
-	color: #522110;
-	font-size: .9em;
-	line-height: 1.3em;
-	text-align: left;
-	font-weight: 700;
-	margin-top: 25px;
-}
 
-/* Old tweet profile boxes */
-.profile-1 {
-	width: 90%;
-	height: 225px;
-	margin-bottom: 50px;
-	border: solid #522110 3px;
-	box-shadow: 0px 0px 0px #332a28;
-	transition: all 300ms ease-in-out;
-}
-.profile-1:hover {
-
-	box-shadow: 0px 5px 10px #332a28;
-}
-.placeholder-1 {
-	width: 20%;
-	height: 110px;
-	margin: 20px 0px 0px 20px;
-	float: left;
-	
-  /*  border: dashed red; */
-}
-.profile-2 {
-	width: 90%;
-	height: 225px;
-	margin-bottom: 50px;
-	border: solid #522110 3px;
-	box-shadow: 0px 0px 0px #332a28;
-}
-
-.profile-2:hover {
-
-	box-shadow: 0px 5px 10px #332a28;
-}
-
-.placeholder-2 {
-	width: 20%;
-	height: 110px;
-	margin: 20px 0px 0px 20px;
-	float: left;
-	
-  /*  border: dashed red; */
-}
-.profile-3 {
-	width: 90%;
-	height: 225px;
-	margin-bottom: 50px;
-	border: solid #522110 3px;
-	box-shadow: 0px 0px 0px #332a28;
-}
-
-.profile-3:hover {
-
-	box-shadow: 0px 5px 10px #332a28;
-}
-.placeholder-3 {
-	width: 20%;
-	height: 110px;
-	margin: 20px 0px 0px 20px;
-	float: left;
-	/*  border: dashed red; */
-}
-
-/* Footer specs */
-footer {
+/* Footer */
+footer.tweet-footer {
 	border-top: 3px solid #522110;
 	clear: both;
-	position: relative;
-	height: 45px;
-	padding-left: 10px;
-	bottom: -40px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+	position:relative;
+	height: 50px;
+	padding: 10px 0px 0px 10px;
+	bottom: -2.3em;
+	align-items: flex-end;
   
 }
 
-/* Footer icons*/
+/* Footer type */
 p.footer {
 	text-align: right;
 }
+
+/* Footer type */
 i.fas.fa-flag {
 	color: #e0a205;
 }
