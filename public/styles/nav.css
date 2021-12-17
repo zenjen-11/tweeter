@@ -23,10 +23,10 @@ nav {
 }
 
 /* Tweeter branding logo text */
-.logoType {
+span.logoType {
   font-family: Bungee, sans-serif;
   /* border: dashed red; */
-  font-size: 1.7em;
+  font-size: 2em;
 }
 
 /* Slogan */
@@ -34,6 +34,7 @@ span.navbarSlogan {
   right: 1.5em;
   top: 1.5em;
   font-size: 1.5em;
+  margin-right: 3em;
   /* border: dashed red; */
 }
 

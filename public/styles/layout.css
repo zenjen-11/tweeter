@@ -20,7 +20,7 @@
 body {
 	color: #522110;
 	background-color: #ecebdb;
-	font-size: 1.13em;
+	font-size: 1.15em;
 	line-height: 1.3em;
 }
 /*
@@ -33,14 +33,4 @@ main {
 	top: 140px;
 	background-color: #ecebdb;
 	position: relative;
-}
-h4 {
-	margin: 12px;
-	font-family: Bungee;
-	sans-serif;
-	color: #522110;
-	font-size: .9em;
-	line-height: 1.3em;
-	text-align: left;
-	font-weight: 700;
 }

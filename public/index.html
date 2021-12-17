@@ -65,7 +65,7 @@
       <!-- Page-specific (main) content here -->
 
       <section class="new-tweet">
-        <form method="POST" action="/tweets/">
+        <form class= "tweet-input" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
@@ -73,13 +73,13 @@
             <button class="tweet-button" type="submit">Tweet</button>
           </div>
         </form>
-
-        <div class="profile-1">
+        <div id = "tweet-container"></div>
+ <!--       <div class="profile-1">
           <div class="placeholder-1"><img src="/images/avatar-1.gif" /></div>
           <h4>Donald J. Trump</h4>
           <p>Jack Dorsey is a loser... and so is Mark Zuckerberg.</p>
           <footer>
-            <p class="footer">2 days ago</p>
+            <p class="footer"><time class="timeago" datetime="2008-07-17T09:24:17Z" title="December 16, 2021"></time></p>
             <div class="icons">
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>
@@ -92,7 +92,7 @@
           <h4>Melania Trump</h4>
           <p>I really don't care. Do you?</p>
           <footer>
-            <p class="footer">3 days ago</p>
+            <p class="footer"><time class="timeago" datetime="2008-07-17T09:24:17Z" title="December 16, 2021"></time></p>
             <div class="icons">
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>
@@ -107,13 +107,13 @@
             If he wasn't my father, I would spray him <br>with Mace.
           </p>
           <footer>
-            <p class="footer">7 days ago</p>
+            <p class="footer"><time class="timeago" datetime="2008-07-17T09:24:17Z" title="December 16, 2021"></time></p>
             <div class="icons">
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>
               <i class="fas fa-heart"></i>
             </div>
-          </footer>
+          </footer> -->
         </div>
       </section>
     </main>

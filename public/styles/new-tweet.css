@@ -4,7 +4,7 @@ main#container {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 /*New tweet section */
@@ -19,12 +19,6 @@ section.new-tweet {
 	margin-bottom: 40px;
 }
 
-/* Tweet form */
-.new-tweet form {
-	width: 100%;
-	/* border: dashed red; */
-	margin-bottom: 30px
-}
 textarea#tweet-text {
 	width: 90%;
 	border-bottom: 7px solid #522110;
@@ -33,12 +27,17 @@ textarea#tweet-text {
 	margin-top: 20px;
 }
 .new-tweet label {
-	font-family: Bungee;
-	sans-serif;
+	font-family: Bungee, sans-serif;
 	font-size: 1.12em;
 	line-height: 18px;
 	/*  border: dashed red; */
 	color: #522110;
+}
+/* Tweet form */
+.new-tweet form {
+	width: 100%;
+	/* border: dashed red; */
+	margin-bottom: 30px
 }
 
 /* Tweet button */
@@ -91,6 +90,18 @@ output.counter {
 .new-tweet i {
 	padding: 3px 10px;
 } 
+/* font for individual profiles */
+h4 {
+	margin: 12px;
+	font-family: Bungee;
+	sans-serif;
+	color: #522110;
+	font-size: .9em;
+	line-height: 1.3em;
+	text-align: left;
+	font-weight: 700;
+	margin-top: 25px;
+}
 
 /* Old tweet profile boxes */
 .profile-1 {
@@ -108,7 +119,7 @@ output.counter {
 .placeholder-1 {
 	width: 20%;
 	height: 110px;
-	margin: 20px 10px 0px 20px;
+	margin: 20px 0px 0px 20px;
 	float: left;
 	
   /*  border: dashed red; */
@@ -129,7 +140,7 @@ output.counter {
 .placeholder-2 {
 	width: 20%;
 	height: 110px;
-	margin: 20px 10px 0px 20px;
+	margin: 20px 0px 0px 20px;
 	float: left;
 	
   /*  border: dashed red; */
@@ -149,7 +160,7 @@ output.counter {
 .placeholder-3 {
 	width: 20%;
 	height: 110px;
-	margin: 20px 10px 0px 20px;
+	margin: 20px 0px 0px 20px;
 	float: left;
 	/*  border: dashed red; */
 }
