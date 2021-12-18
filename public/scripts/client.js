@@ -4,13 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// gets tweets from the server and renders them on the page
-
 $(document).ready(function () {
 
-  const createTweetElement = function(tweetContent) {
+  // shows/hides new tweet section when clicked the arrow icon on navbar
+  $("nav i").on("click", () => {
+    $(".new-tweet").slideToggle();
+    $(".new-tweet textarea").focus();
+  });
+
+  // gets tweets from the server and renders them on the page
+  const createTweetElement = function (tweetContent) {
     // tweet article element which will be returned in the end
-  const date = timeago.format(tweetContent.created_at)
+    const date = timeago.format(tweetContent.created_at);
+
     // tweet element's inner html
     const newTweet = `
     <div id = "tweet-box">
@@ -32,13 +38,13 @@ $(document).ready(function () {
     // return html
     return newTweet;
   };
-  
+
   // adds all tweets to #tweets-container
-  const renderTweets = function(tweetsDatabase) {
-    console.log(tweetsDatabase);
-  
-  
-  
+  const renderTweets = function (tweetsDatabase) {
+    //empty tweets from tweet form
+    $("textarea#tweet-text").empty();
+    // $("textarea#tweet-text").trigger("reset");
+
     // turn each tweet in database into an html element, and append them to container
     for (const tweet of tweetsDatabase) {
       const $tweet = createTweetElement(tweet);
@@ -46,7 +52,6 @@ $(document).ready(function () {
       $("#tweet-container").prepend($tweet);
     }
   };
-  console.log("hello");
   const loadTweets = () => {
     $.ajax("/tweets", {
       method: "GET",
@@ -61,61 +66,35 @@ $(document).ready(function () {
     event.preventDefault();
     console.log($(this).serialize());
 
+    const $errorMessage = $(this).children("h4");
+    const tweetText = $("#tweet-text").val();
 
-  const $errorMessage = $(this).children('h4');
-  const tweetText = $('#tweet-text').val();
-
-  $(".error").hide();
+    $(".error").hide();
 
     if (tweetText.length < 1) {
-      $('.tweet-error').html('<span class="error">This field is required</span>');
+      $(".tweet-error").html(
+        '<span class="error">Please input some text. Input field cannot be blank!</span>'
+      );
       $errorMessage.slideDown(300);
-    }
-    else if (tweetText.length > 140) {
-      $('.tweet-error').html('<span class="error">There is a limit of 140 characters.</span>');
+    } else if (tweetText.length > 140) {
+      $(".tweet-error").html(
+        '<span class="error">Please limit your tweet to 140 characters.</span>'
+      );
       $errorMessage.slideDown(300);
-    }
-
-    else {
-   // AJAX POST to server
+    } else {
+      // AJAX POST to server
       $.post("/tweets", $(this).serialize(), function (data) {
         loadTweets();
         $textArea.val(""); // clear textarea
         $(".counter").text("140"); // reset counter to 140
-  
+
+      //Reset the character counter to 140 after submitting the tweet
+      $(this)
+      .closest(".new-tweet")
+      .find(".counter")
+      .removeClass("negative-count")
+      .text(140);
       });
     }
-
- });
-
+  });
 });
-
-    
-
-    // // AJAX POST to server
-    // $.post("/tweets", $(this).serialize(), function (data) {
-    //   loadTweets();
-    //   $textArea.val(""); // clear textarea
-    //   $(".counter").text("140"); // reset counter to 140
-
-    //   //activate timeago plugin
-    //   jQuery(document).ready(function() {
-    //     jQuery("time.timeago").timeago();
-      // });
-  //   });
-  // });
-
-
-
-
-// // shows/hides new tweet section when clicked the arrow icon on navbar
-// $('nav i').on('click', () => {
-//   $('.new-tweet').slideToggle();
-//   $('.new-tweet textarea').focus();
-// });
-
-// $('i.fas.fa-heart').click(function () {
-//     let form-icons = $(this).text();
-//     alert(form-icons); // this prints something, now.
-//     $(this).css("color", "red");
-// });
