@@ -51,7 +51,7 @@ p.tweet-content {
 
 
 /* Error message (default hidden) */
-.new-tweet h5 {
+.new-tweet h4 {
 	margin: 0.5em 0;
 	font-size: 0.9em;
 	font-weight: 400;
@@ -72,15 +72,21 @@ footer.tweet-footer {
 	clear: both;
 	position:relative;
 	height: 50px;
-	padding: 10px 0px 0px 10px;
+	padding: 7px 12px 7px 12px;
 	bottom: -2.3em;
+	display: flex;
+	flex-direction: row-reverse;
 	align-items: flex-end;
+	justify-content: space-between
   
 }
 
 /* Footer type */
-p.footer {
-	text-align: right;
+.time {
+
+}
+time.timeago {
+
 }
 
 /* Footer type */

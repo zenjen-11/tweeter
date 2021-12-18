@@ -3,48 +3,49 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const createTweetElement = function(tweetContent) {
-  // tweet article element which will be returned in the end
-
-  // tweet element's inner html
-  const newTweet = `
-  <div id = "tweet-box">
-    <span class ="avatars" > <img class = "avatars" src = ${tweetContent.user.avatars} /></span>
-    <span class = "user-name"><h3> ${tweetContent.user.name}</h3></span>
-    <span class = "user-handle">${tweetContent.user.handle}</span>
-    <p class="tweet-content">${tweetContent.content.text}</p>
-<footer class = "tweet-footer">
-    <span>
-      <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
-    </span>
-</footer>
-</div>
-
-`;
-  // return html
-  return newTweet;
-};
-
-// adds all tweets to #tweets-container
-const renderTweets = function(tweetsDatabase) {
-  console.log(tweetsDatabase);
-
-  // remove any tweets that are already in the container
-  // $('#tweet-container').empty();
-
-  // turn each tweet in database into an html element, and append them to container
-  for (const tweet of tweetsDatabase) {
-    const $tweet = createTweetElement(tweet);
-    console.log($tweet);
-    $("#tweet-container").prepend($tweet);
-  }
-};
 
 // gets tweets from the server and renders them on the page
 
 $(document).ready(function () {
+
+  const createTweetElement = function(tweetContent) {
+    // tweet article element which will be returned in the end
+  const date = timeago.format(tweetContent.created_at)
+    // tweet element's inner html
+    const newTweet = `
+    <div id = "tweet-box">
+      <span class ="avatars" > <img class = "avatars" src = ${tweetContent.user.avatars} /></span>
+      <span class = "user-name"><h3> ${tweetContent.user.name}</h3></span>
+      <span class = "user-handle">${tweetContent.user.handle}</span>
+      <p class="tweet-content">${tweetContent.content.text}</p>
+  <footer class = "tweet-footer">
+      <span>
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </span>
+      <div class = "time">  <time class="timeago" datetime="2021-12-18T09:24:17Z" title="8"></time></div>
+     <time class="timeago" datetime="2021-12-18T09:24:17Z" title="8">${date}</time>
+  </footer>
+  </div>
+  `;
+    // return html
+    return newTweet;
+  };
+  
+  // adds all tweets to #tweets-container
+  const renderTweets = function(tweetsDatabase) {
+    console.log(tweetsDatabase);
+  
+  
+  
+    // turn each tweet in database into an html element, and append them to container
+    for (const tweet of tweetsDatabase) {
+      const $tweet = createTweetElement(tweet);
+      console.log($tweet);
+      $("#tweet-container").prepend($tweet);
+    }
+  };
   console.log("hello");
   const loadTweets = () => {
     $.ajax("/tweets", {
@@ -54,23 +55,58 @@ $(document).ready(function () {
       renderTweets(result);
     });
   };
+
   loadTweets();
   $(".tweet-input").submit(function (event) {
     event.preventDefault();
     console.log($(this).serialize());
 
-    // AJAX POST to server
-    $.post("/tweets", $(this).serialize(), function (data) {
-      loadTweets();
-      $textArea.val(""); // clear textarea
-      $(".counter").text("140"); // reset counter to 140
-    });
-  });
 
-  // $('time.timeago').timeago();
+  const $errorMessage = $(this).children('h4');
+  const tweetText = $('#tweet-text').val();
 
-  // load all tweets when page is loaded
+  $(".error").hide();
+
+    if (tweetText.length < 1) {
+      $('.tweet-error').html('<span class="error">This field is required</span>');
+      $errorMessage.slideDown(300);
+    }
+    else if (tweetText.length > 140) {
+      $('.tweet-error').html('<span class="error">There is a limit of 140 characters.</span>');
+      $errorMessage.slideDown(300);
+    }
+
+    else {
+   // AJAX POST to server
+      $.post("/tweets", $(this).serialize(), function (data) {
+        loadTweets();
+        $textArea.val(""); // clear textarea
+        $(".counter").text("140"); // reset counter to 140
+  
+      });
+    }
+
+ });
+
 });
+
+    
+
+    // // AJAX POST to server
+    // $.post("/tweets", $(this).serialize(), function (data) {
+    //   loadTweets();
+    //   $textArea.val(""); // clear textarea
+    //   $(".counter").text("140"); // reset counter to 140
+
+    //   //activate timeago plugin
+    //   jQuery(document).ready(function() {
+    //     jQuery("time.timeago").timeago();
+      // });
+  //   });
+  // });
+
+
+
 
 // // shows/hides new tweet section when clicked the arrow icon on navbar
 // $('nav i').on('click', () => {
