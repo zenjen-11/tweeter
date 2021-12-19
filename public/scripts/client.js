@@ -85,15 +85,9 @@ $(document).ready(function () {
       // AJAX POST to server
       $.post("/tweets", $(this).serialize(), function (data) {
         loadTweets();
-        $textArea.val(""); // clear textarea
+        tweetText.val(""); // clear textarea
         $(".counter").text("140"); // reset counter to 140
-
-      //Reset the character counter to 140 after submitting the tweet
-      $(this)
-      .closest(".new-tweet")
-      .find(".counter")
-      .removeClass("negative-count")
-      .text(140);
+    
       });
     }
   });
