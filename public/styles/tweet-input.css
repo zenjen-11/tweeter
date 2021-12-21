@@ -1,9 +1,10 @@
 /* Main container */
-main#container {
+#container{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: space-between;
+	flex: 1;
 	width:100%
 }
 
@@ -91,3 +92,26 @@ output.counter {
 .new-tweet i {
 	padding: 3px 10px;
 } 
+
+@media only screen and (max-width: 768px) {
+	section.new-tweet {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+
+	
+	}
+
+@media only screen and (max-width: 500px) {
+  #container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+section.new-tweet {
+	width: 88%;
+
+
+}

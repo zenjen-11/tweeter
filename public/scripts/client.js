@@ -86,7 +86,7 @@ $(document).ready(function () {
       $.post("/tweets", $(this).serialize(), function (data) {
         loadTweets();
         tweetText.val(""); // clear textarea
-        $(".counter").text("140"); // reset counter to 140
+        $(".counter").html("140"); // reset counter to 140
     
       });
     }
